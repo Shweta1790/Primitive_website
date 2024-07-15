@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+<head>
+    //<link href="{% static 'a.css' %}" rel="stylesheet">
+</head>
+{% block page_title %}
+{{ m|capfirst }}
+{% endblock page_title %}
+
+{% block content %}
+{% if ch is not None%}
+    <h1>{{ ch }}</h1>
+    {% else %}
+    <h1>No task found yet!</h1>
+    {% endif %}
+{% endblock content %}

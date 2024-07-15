@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'a.css' %}" rel="stylesheet">
+    <title> {% block page_title %}{% endblock page_title %}</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'Home' %}">Home</a>
+        {% comment %} <a href="#challenges">Challenges</a> {% endcomment %}
+    </div>
+    
+    {% block content %}{% endblock content %}
+    
+</body>
+</html>
